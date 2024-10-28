@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - Edyotech</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        .container img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container button {
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .container button:hover {
+            background-color: #218838;
+        }
+        .container .register {
+            margin-top: 20px;
+            color: #007bff;
+            cursor: pointer;
+        }
+        .container .register:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="img/logo.png" alt="Edyotech Logo">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" id="email" placeholder="Correo Electrónico">
+        <input type="password" id="password" placeholder="Contraseña">
+        <button onclick="login()">Iniciar Sesión</button>
+        <p class="register" onclick="redirectToRegister()">¿No tienes cuenta? Regístrate</p>
+    </div>
+
+    <script>
+        function login() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Aquí puedes agregar la lógica para verificar las credenciales
+            if (email && password) {
+                alert('Has ingresado correctamente');
+            } else {
+                alert('Por favor, completa todos los campos');
+            }
+        }
+
+        function redirectToRegister() {
+            window.location.href = 'formulario.html';
+        }
+    </script>
+
+</body>
+</html>
+
